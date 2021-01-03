@@ -76,17 +76,27 @@ public class OrderControllerTests {
 
         assertEquals(orders.size(), orderList.size());
         assertEquals(orders.get(0).getId(), orderList.get(0).getId());
+        assertEquals(orders.get(0).getUser().getId(), orderList.get(0).getUser().getId());
+    }
+
+    private Item createItem() {
+        Item item = new Item();
+        item.setId(1L);
+        item.setPrice(new BigDecimal(10));
+        item.setName("Pizza");
+        item.setDescription("Very tasty Pizza, with Ananas");
+
+        return item;
     }
 
     private User createUser() {
-        Item item = new Item();
-        item.setPrice(new BigDecimal(10));
-        item.setName("Pizza");
+        Item item = createItem();
 
         Cart cart = new Cart();
         cart.addItem(item);
 
         User user = new User();
+        user.setId(1L);
         user.setUsername("lavilas");
         user.setCart(cart);
         cart.setUser(user);
@@ -94,8 +104,14 @@ public class OrderControllerTests {
     }
 
     private List<UserOrder> createUserOrder() {
+        Item item = createItem();
+        User user = new User();
+        user.setId(1L);
+
         UserOrder order = new UserOrder();
         order.setId(10L);
+        order.setItems(Collections.singletonList(item));
+        order.setUser(user);
         return Collections.singletonList(order);
     }
 }

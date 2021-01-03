@@ -58,6 +58,7 @@ public class UserControllerTests {
     public void findByUserNameSuccess() {
         User user = new User();
         user.setUsername("user");
+        user.setId(1L);
 
         when(userRepository.findByUsername(anyString())).thenReturn(user);
         ResponseEntity<User> response = userController.findByUserName(user.getUsername());
@@ -70,7 +71,11 @@ public class UserControllerTests {
     }
 
     private CreateUserRequest createUserRequest(String password, String confirmPassword) {
-        return new CreateUserRequest("lavilas", password, confirmPassword);
+        CreateUserRequest userRequest = new CreateUserRequest();
+        userRequest.setPassword(password);
+        userRequest.setConfirmPassword(confirmPassword);
+
+        return userRequest;
     }
 
 }
