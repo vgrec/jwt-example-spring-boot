@@ -78,4 +78,56 @@ public class CartControllerTests {
         assertEquals(new BigDecimal(20), cart.getTotal());
         assertEquals(Arrays.asList(item, item), cart.getItems());
     }
+
+    @Test
+    public void testRemoveFromCard_UserNotFound() {
+        when(userRepository.findByUsername(anyString())).thenReturn(null);
+
+        ResponseEntity<Cart> responseEntity = cartController.removeFromcart(
+                new ModifyCartRequest("unknown_user", 1, 2)
+        );
+        assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void testRemoveFromCard_ItemNotFound() {
+        when(userRepository.findByUsername(anyString())).thenReturn(new User());
+        when(itemRepository.findById(anyLong())).thenReturn(Optional.empty());
+
+        ResponseEntity<Cart> responseEntity = cartController.removeFromcart(
+                new ModifyCartRequest("username", 1, 2)
+        );
+        assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void testRemoveFromCard_Success() {
+        Cart cart = new Cart();
+
+        User user = new User();
+        user.setUsername("username");
+        user.setCart(cart);
+
+        Item item = new Item();
+        item.setName("lavilas");
+        item.setPrice(new BigDecimal(10));
+
+        cart.addItem(item); // add the item to the card
+
+        when(userRepository.findByUsername(anyString())).thenReturn(user);
+        when(itemRepository.findById(anyLong())).thenReturn(Optional.of(item));
+
+        ResponseEntity<Cart> responseEntity = cartController.removeFromcart(
+                new ModifyCartRequest("username", 1, 1)
+        );
+
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+
+        Cart updatedCard = responseEntity.getBody();
+
+        assertNotNull(updatedCard);
+        assertEquals(new BigDecimal(0), updatedCard.getTotal());
+        assertEquals(0, updatedCard.getItems().size()); // check card is empty
+    }
+
 }
