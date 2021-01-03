@@ -4,36 +4,45 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateUserRequest {
 
-	@JsonProperty
-	private String username;
+    @JsonProperty
+    private String username;
 
-	@JsonProperty
-	private String password;
+    @JsonProperty
+    private String password;
 
-	@JsonProperty
-	private String confirmPassword;
+    @JsonProperty
+    private String confirmPassword;
 
-	public String getUsername() {
-		return username;
-	}
+    public CreateUserRequest() {
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public CreateUserRequest(String username, String password, String confirmPassword) {
+        this.username = username;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
 }

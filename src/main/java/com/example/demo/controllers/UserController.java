@@ -7,8 +7,6 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.apache.log4j.lf5.LogLevel;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -19,14 +17,15 @@ public class UserController {
 
     private Logger logger = LogManager.getLogger(UserController.class);
 
-    @Autowired
     private UserRepository userRepository;
-
-    @Autowired
     private CartRepository cartRepository;
-
-    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public UserController(UserRepository userRepository, CartRepository cartRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.userRepository = userRepository;
+        this.cartRepository = cartRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
