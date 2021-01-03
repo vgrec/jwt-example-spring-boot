@@ -40,11 +40,11 @@ public class UserController {
 
     @PostMapping("/create")
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+        logger.info("create-user: new request");
         if (!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+            logger.info("create-user: failed");
             return ResponseEntity.badRequest().build();
         }
-
-        logger.debug("Creating a new user...");
 
         User user = new User();
         user.setUsername(createUserRequest.getUsername());
@@ -53,6 +53,8 @@ public class UserController {
         cartRepository.save(cart);
         user.setCart(cart);
         userRepository.save(user);
+
+        logger.info("create-user: succeeded");
         return ResponseEntity.ok(user);
     }
 

@@ -4,6 +4,8 @@ import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.UserOrder;
 import com.example.demo.model.persistence.repositories.OrderRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +17,8 @@ public class OrderController {
     private UserRepository userRepository;
     private OrderRepository orderRepository;
 
+    private Logger logger = LogManager.getLogger(OrderController.class);
+
     public OrderController(UserRepository userRepository, OrderRepository orderRepository) {
         this.userRepository = userRepository;
         this.orderRepository = orderRepository;
@@ -22,12 +26,15 @@ public class OrderController {
 
     @PostMapping("/submit/{username}")
     public ResponseEntity<UserOrder> submit(@PathVariable String username) {
+        logger.info("submit-order: new request");
         User user = userRepository.findByUsername(username);
         if (user == null) {
+            logger.info("submit-order: failed");
             return ResponseEntity.notFound().build();
         }
         UserOrder order = UserOrder.createFromCart(user.getCart());
         orderRepository.save(order);
+        logger.info("submit-order: succeeded");
         return ResponseEntity.ok(order);
     }
 
