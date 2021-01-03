@@ -12,9 +12,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.math.BigDecimal;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -49,6 +52,32 @@ public class OrderControllerTests {
         assertEquals(user.getUsername(), order.getUser().getUsername());
     }
 
+    @Test
+    public void getOrdersForUser_UserNotFound() {
+        when(userRepository.findByUsername(anyString())).thenReturn(null);
+        ResponseEntity<UserOrder> responseEntity = orderController.submit("unknown_user");
+
+        assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void getOrdersForUser_Success() {
+        List<UserOrder> orders = createUserOrder();
+
+        when(userRepository.findByUsername(anyString())).thenReturn(new User());
+        when(orderRepository.findByUser(any(User.class))).thenReturn(orders);
+
+        ResponseEntity<List<UserOrder>> responseEntity = orderController.getOrdersForUser("username");
+
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+
+        List<UserOrder> orderList = responseEntity.getBody();
+        assertNotNull(orderList);
+
+        assertEquals(orders.size(), orderList.size());
+        assertEquals(orders.get(0).getId(), orderList.get(0).getId());
+    }
+
     private User createUser() {
         Item item = new Item();
         item.setPrice(new BigDecimal(10));
@@ -62,5 +91,11 @@ public class OrderControllerTests {
         user.setCart(cart);
         cart.setUser(user);
         return user;
+    }
+
+    private List<UserOrder> createUserOrder() {
+        UserOrder order = new UserOrder();
+        order.setId(10L);
+        return Collections.singletonList(order);
     }
 }
