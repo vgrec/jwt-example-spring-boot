@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0eea6d33-0458-4c56-b1d8-9a47050e6ed1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/OrderControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/CartControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/CartControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -14,18 +16,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="280" />
+    <option name="myElementSize" value="390" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/CartControllerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="122" column="10" lean-forward="true" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+            <state relative-caret-position="322">
+              <caret line="26" selection-start-line="26" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,19 +36,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+            <state relative-caret-position="345">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Cart.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/UserOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+            <state relative-caret-position="373">
+              <caret line="80" column="21" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/OrderControllerTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar!/org/hibernate/criterion/Order.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-445">
+              <caret line="25" column="76" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -84,10 +116,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/model/requests/CreateUserRequest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/SareetaApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/model/requests/ModifyCartRequest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/CartControllerTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/demo/OrderControllerTests.java" />
       </list>
     </option>
   </component>
@@ -216,6 +250,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
@@ -230,7 +265,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CartControllerTests">
+  <component name="RunManager" selected="JUnit.OrderControllerTests.submitOrder_Success">
     <configuration name="CartControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
@@ -246,7 +281,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartControllerTests.testAddToCard_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderControllerTests.submitOrder_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -255,14 +290,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.CartControllerTests" />
-      <option name="METHOD_NAME" value="testAddToCard_Success" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.OrderControllerTests" />
+      <option name="METHOD_NAME" value="submitOrder_Success" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartControllerTests.testRemoveFromCard_ItemNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderControllerTests.submitOrder_UserNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -271,14 +306,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.CartControllerTests" />
-      <option name="METHOD_NAME" value="testRemoveFromCard_ItemNotFound" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.OrderControllerTests" />
+      <option name="METHOD_NAME" value="submitOrder_UserNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartControllerTests.testRemoveFromCard_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -287,14 +322,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.CartControllerTests" />
-      <option name="METHOD_NAME" value="testRemoveFromCard_Success" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.UserControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartControllerTests.testRemoveFromCard_UserNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.example.demo in auth-course" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -303,20 +337,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.CartControllerTests" />
-      <option name="METHOD_NAME" value="testRemoveFromCard_UserNotFound" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderControllerTests.submitOrder_Success" />
+        <item itemvalue="JUnit.OrderControllerTests.submitOrder_UserNotFound" />
+        <item itemvalue="JUnit.UserControllerTests" />
+        <item itemvalue="JUnit.com.example.demo in auth-course" />
         <item itemvalue="JUnit.CartControllerTests" />
-        <item itemvalue="JUnit.CartControllerTests.testRemoveFromCard_Success" />
-        <item itemvalue="JUnit.CartControllerTests.testRemoveFromCard_ItemNotFound" />
-        <item itemvalue="JUnit.CartControllerTests.testRemoveFromCard_UserNotFound" />
-        <item itemvalue="JUnit.CartControllerTests.testAddToCard_Success" />
       </list>
     </recent_temporary>
   </component>
@@ -380,46 +412,53 @@
       <option name="project" value="LOCAL" />
       <updated>1609694129300</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add tests for removing from cart">
+      <created>1609694688809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609694688809</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CartControllerTests_testAddToCard_Success - 2021.01.03 at 18h 09m 27s.xml">
-      <configuration name="CartControllerTests.testAddToCard_Success" configurationId="JUnit" />
+    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 22m 10s.xml">
+      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testAddToCard_Success - 2021.01.03 at 18h 12m 04s.xml">
-      <configuration name="CartControllerTests.testAddToCard_Success" configurationId="JUnit" />
+    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 22m 36s.xml">
+      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testAddToCard_Success - 2021.01.03 at 18h 12m 25s.xml">
-      <configuration name="CartControllerTests.testAddToCard_Success" configurationId="JUnit" />
+    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 22m 57s.xml">
+      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testAddToCard_Success - 2021.01.03 at 18h 12m 58s.xml">
-      <configuration name="CartControllerTests.testAddToCard_Success" configurationId="JUnit" />
+    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 23m 06s.xml">
+      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testAddToCard_Success - 2021.01.03 at 18h 13m 31s.xml">
-      <configuration name="CartControllerTests.testAddToCard_Success" configurationId="JUnit" />
+    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 23m 39s.xml">
+      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testAddToCard_Success - 2021.01.03 at 18h 14m 12s.xml">
-      <configuration name="CartControllerTests.testAddToCard_Success" configurationId="JUnit" />
+    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 24m 05s.xml">
+      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests - 2021.01.03 at 18h 14m 36s.xml">
+    <history-entry file="CartControllerTests - 2021.01.03 at 18h 24m 21s.xml">
       <configuration name="CartControllerTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testRemoveFromCard_UserNotFound - 2021.01.03 at 18h 17m 04s.xml">
-      <configuration name="CartControllerTests.testRemoveFromCard_UserNotFound" configurationId="JUnit" />
+    <history-entry file="com_example_demo_in_auth-course - 2021.01.03 at 18h 25m 35s.xml">
+      <configuration name="com.example.demo in auth-course" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testRemoveFromCard_ItemNotFound - 2021.01.03 at 18h 17m 52s.xml">
-      <configuration name="CartControllerTests.testRemoveFromCard_ItemNotFound" configurationId="JUnit" />
+    <history-entry file="UserControllerTests - 2021.01.03 at 18h 28m 01s.xml">
+      <configuration name="UserControllerTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CartControllerTests_testRemoveFromCard_Success - 2021.01.03 at 18h 20m 50s.xml">
-      <configuration name="CartControllerTests.testRemoveFromCard_Success" configurationId="JUnit" />
+    <history-entry file="OrderControllerTests_submitOrder_UserNotFound - 2021.01.03 at 18h 30m 39s.xml">
+      <configuration name="OrderControllerTests.submitOrder_UserNotFound" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="281" y="3" width="1641" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31344357" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.31309298" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -428,8 +467,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26367614" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28774616" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26258206" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37089714" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -459,7 +498,8 @@
     <MESSAGE value="Add unit test for user creation - success path" />
     <MESSAGE value="Add unit test for user search by user name" />
     <MESSAGE value="Add tests for adding to cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tests for adding to cart" />
+    <MESSAGE value="Add tests for removing from cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests for removing from cart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,10 +510,25 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Cart.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/auth_course$com_example_demo_in_auth_course.ic" NAME="com.example.demo in auth-course Coverage Results" MODIFIED="1609694732290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/auth_course$CartControllerTests.ic" NAME="CartControllerTests Coverage Results" MODIFIED="1609694658445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.demo.*</FILTER>
     </SUITE>
@@ -512,20 +567,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/UserOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/ItemController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -668,17 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="21" column="71" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="21" selection-end-column="71" />
-          <folding>
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/requests/ModifyCartRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -721,24 +751,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Cart.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+        <state relative-caret-position="360">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Cart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+        <state relative-caret-position="175">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/CartControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="122" column="10" lean-forward="true" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+        <state relative-caret-position="322">
+          <caret line="26" selection-start-line="26" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/UserControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-445">
+          <caret line="25" column="76" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.10.Final/hibernate-core-5.3.10.Final.jar!/org/hibernate/criterion/Order.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/UserOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/OrderControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

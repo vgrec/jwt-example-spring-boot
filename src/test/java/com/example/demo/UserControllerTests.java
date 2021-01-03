@@ -5,7 +5,6 @@ import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
-import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,14 +21,9 @@ public class UserControllerTests {
     private CartRepository cartRepository = mock(CartRepository.class);
     private BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
 
-    private UserController userController;
+    private UserController userController = new UserController(userRepository, cartRepository, bCryptPasswordEncoder);
 
     private static final String ENCODED_PASSWORD = "***encoded_password***";
-
-    @Before
-    public void setUp() {
-        userController = new UserController(userRepository, cartRepository, bCryptPasswordEncoder);
-    }
 
     @Test
     public void createUserFailure() {
